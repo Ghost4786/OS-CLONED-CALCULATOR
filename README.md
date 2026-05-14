@@ -2,6 +2,10 @@
 
 Welcome to the **Premium iOS-Style Scientific Calculator** template! This is a production-ready, high-performance web and mobile application built with modern web technologies. It is designed to perfectly mimic the native iOS calculator aesthetic while providing advanced scientific capabilities.
 
+### 📥 Download App
+You can download and install the compiled Android APK directly to your phone:
+[**Download Latest APK**](https://github.com/Ghost4786/OS-CLONED-CALCULATOR/releases/latest/download/app-release.apk) (Or view all [Releases](https://github.com/Ghost4786/OS-CLONED-CALCULATOR/releases/latest))
+
 ## Features
 
 *   **Pixel-Perfect iOS Design**: Features the iconic "Oval Zero", perfect circular buttons, deep obsidian black background, and Apple's exact color hex codes.
