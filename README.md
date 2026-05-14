@@ -2,7 +2,7 @@
 
 Welcome to the **Premium iOS-Style Scientific Calculator** template! This is a production-ready, high-performance web and mobile application built with modern web technologies. It is designed to perfectly mimic the native iOS calculator aesthetic while providing advanced scientific capabilities.
 
-## 🚀 Features
+## Features
 
 *   **Pixel-Perfect iOS Design**: Features the iconic "Oval Zero", perfect circular buttons, deep obsidian black background, and Apple's exact color hex codes.
 *   **Fully Responsive**: Utilizes dynamic CSS Grid and Flexbox to ensure the calculator never scrolls and fits perfectly on any screen size, from small phones to tablets.
@@ -11,27 +11,13 @@ Welcome to the **Premium iOS-Style Scientific Calculator** template! This is a p
 *   **PWA Ready**: Includes a Web App Manifest and Service Worker for offline support and "Add to Home Screen" functionality.
 *   **Lightning Fast**: Built on **Vite** with Vanilla JavaScript (No heavy frameworks like React or Angular).
 
-## 🛠 Tech Stack
+## Tech Stack
 *   **HTML5 / CSS3** (Vanilla, CSS Grid, Flexbox)
 *   **JavaScript** (ES6+)
 *   **Vite** (Build Tool & Dev Server)
 *   **Capacitor** (Native App Wrapper)
 
-## 📦 Getting Started (Local Development)
-
-1. **Install Dependencies**
-   Make sure you have [Node.js](https://nodejs.org/) installed, then run:
-   ```bash
-   npm install
-   ```
-
-2. **Run Development Server**
-   ```bash
-   npm run dev
-   ```
-   *This will start a local server at `http://localhost:5173/` where you can view and edit the app in real-time.*
-
-## 📱 Building for Android (APK)
+## Building for Android (APK)
 
 This project is pre-configured to be built into a native Android app.
 
@@ -51,7 +37,7 @@ This project is pre-configured to be built into a native Android app.
    ```
    *From Android Studio, you can generate a signed APK or App Bundle to upload to the Google Play Store or Amazon Appstore.*
 
-## 🎨 Customization
+## Customization
 
 All styling is managed centrally via CSS variables in `src/style.css`.
 To change the app's theme, simply edit the variables at the top of the file:
@@ -63,11 +49,11 @@ To change the app's theme, simply edit the variables at the top of the file:
 }
 ```
 
-## 💖 Support the Project
+## Support the Project
 
 This project is 100% Open Source under the MIT License. If you found this template helpful for learning how to use Vite + Capacitor, or if it saved you time on a freelance project, please consider supporting the developer!
 
-* [Buy me a Coffee ☕](https://www.buymeacoffee.com/) (You can put your link here later!)
+* [Buy me a Coffee](https://www.buymeacoffee.com/) (You can put your link here later!)
 
 ---
 *If you have any issues, please refer to the Capacitor documentation for mobile build troubleshooting.*
