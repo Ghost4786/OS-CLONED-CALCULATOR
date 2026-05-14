@@ -1,0 +1,5 @@
+{
+  "appId": "com.quantumcalc.app",
+  "appName": "Quantum Calc",
+  "webDir": "dist"
+}

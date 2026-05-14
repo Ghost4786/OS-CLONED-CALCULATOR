@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-color: #000000;
+  --btn-number: #333333;
+  --btn-operator: #FF9F0A;
+  --btn-function: #A5A5A5;
+  --btn-scientific: #212121;
+  --text-primary: #FFFFFF;
+  --text-dark: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body, #app {
+  background: var(--bg-color);
+  color: var(--text-primary);
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.calculator-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 30px 16px;
+  max-width: 450px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Display */
+.display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px 10px 10px 10px;
+  /* NO background, NO border, pure negative space separation like iOS */
+}
+
+.history {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  font-weight: 400;
+  min-height: 28px;
+}
+
+.current-input {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -2px;
+  transition: all 0.2s ease;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+.current-input.result {
+  color: #FFFFFF; 
+}
+
+/* Toggles */
+.mode-toggle {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 5px 15px 5px;
+}
+
+.toggle-item {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.2s;
+}
+
+.toggle-item:active {
+  background: rgba(255,255,255,0.1);
+}
+
+.toggle-item.active {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scientific-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.scientific-panel.active {
+  max-height: 250px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* Button Base */
+button {
+  border: none;
+  background: var(--btn-number);
+  color: var(--text-primary);
+  font-size: 2.3rem;
+  font-weight: 400;
+  border-radius: 50%; /* Pure iOS circles */
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.1s ease, transform 0.1s ease;
+}
+
+button:active {
+  filter: brightness(1.6);
+}
+
+/* Oval Zero */
+.btn-zero {
+  grid-column: span 2;
+  border-radius: 50px; /* high border radius for pill shape */
+  aspect-ratio: auto;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+/* Specific Colors */
+.btn-operator {
+  background: var(--btn-operator);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.btn-operator:active {
+  filter: brightness(1.3);
+  background: #fbc78d; /* iOS active flash */
+}
+
+.btn-function {
+  background: var(--btn-function);
+  color: var(--text-dark);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.btn-function:active {
+  filter: brightness(1.2);
+}
+
+.btn-scientific {
+  background: var(--btn-scientific);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  aspect-ratio: auto;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.btn-scientific:active {
+  background: #3a3a3c;
+  filter: none;
+}
+
+/* Mobile specific overrides */
+@media (max-width: 600px) {
+  .calculator-container {
+    padding: 0 12px 20px 12px;
+  }
+  .current-input {
+    font-size: 5rem;
+  }
+}
+
+/* Adjustments for short screens */
+@media (max-height: 700px) {
+  .display { padding: 10px 5px; }
+  .current-input { font-size: 4rem; }
+  button { font-size: 1.8rem; }
+  .btn-scientific { height: 42px; font-size: 1rem; border-radius: 21px; }
+}

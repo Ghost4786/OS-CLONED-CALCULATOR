@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <title>Quantum Calc | Advanced Calculator</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="calculator-container">
+        <!-- Display -->
+        <div class="display">
+          <div class="history" id="history"></div>
+          <div class="current-input" id="currentInput">0</div>
+        </div>
+
+        <!-- Mode Toggle -->
+        <div class="mode-toggle">
+          <span class="toggle-item" id="toggle-sci">ADVANCED</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+          <!-- Scientific Panel -->
+          <div class="scientific-panel" id="scientificPanel">
+            <button class="btn-scientific" id="btn-sign">±</button>
+            <button class="btn-scientific" data-val="sin">sin</button>
+            <button class="btn-scientific" data-val="cos">cos</button>
+            <button class="btn-scientific" data-val="tan">tan</button>
+            <button class="btn-scientific" data-val="log">log</button>
+            <button class="btn-scientific" data-val="ln">ln</button>
+            <button class="btn-scientific" data-val="sqrt">√</button>
+            <button class="btn-scientific" data-val="pow">xʸ</button>
+            <button class="btn-scientific" data-val="fact">n!</button>
+            <button class="btn-scientific" data-val="pi">π</button>
+            <button class="btn-scientific" data-val="e">e</button>
+            <button class="btn-scientific" data-val="(">(</button>
+            <button class="btn-scientific" data-val=")">)</button>
+          </div>
+
+          <!-- Main Grid -->
+          <div class="main-grid">
+            <button class="btn-function" id="btn-clear">AC</button>
+            <button class="btn-function" id="btn-delete">DEL</button>
+            <button class="btn-function" data-val="%">%</button>
+            <button class="btn-operator" data-val="/">÷</button>
+
+            <button data-val="7">7</button>
+            <button data-val="8">8</button>
+            <button data-val="9">9</button>
+            <button class="btn-operator" data-val="*">×</button>
+
+            <button data-val="4">4</button>
+            <button data-val="5">5</button>
+            <button data-val="6">6</button>
+            <button class="btn-operator" data-val="-">−</button>
+
+            <button data-val="1">1</button>
+            <button data-val="2">2</button>
+            <button data-val="3">3</button>
+            <button class="btn-operator" data-val="+">+</button>
+
+            <button data-val="0" class="btn-zero">0</button>
+            <button data-val=".">.</button>
+            <button class="btn-equals btn-operator" id="btn-equals">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+  </body>
+</html>
